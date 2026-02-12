@@ -3,9 +3,11 @@ import LinearGradient from 'react-native-linear-gradient';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import HomeStack from '@/navigation/HomeStack';
-import TripStack from '@/navigation/TripStack';
 import Explore from '@/screens/Explore';
 import Profile from '@/screens/Profile';
+import {bottomTabsColor} from "@/colors/bottomtabscolor.ts";
+import React from "react";
+import NewTrip from "@/screens/NewTrip";
 
 const Tab = createBottomTabNavigator();
 
@@ -39,7 +41,7 @@ const TabNavigator = (): React.JSX.Element => {
             tabBar={(props) => (
                 <LinearGradient
                     colors={
-                        ['#00C853', '#00BFA5', '#2979FF']
+                    bottomTabsColor
                     }
                     start={{x: 0, y: 0}}
                     end={{x: 1, y: 0}}
@@ -73,7 +75,7 @@ const TabNavigator = (): React.JSX.Element => {
 
             <Tab.Screen
                 name="Trips"
-                component={TripStack}
+                component={NewTrip}
                 options={{
                     tabBarIcon: ({color, size, focused}) => (
                         <Ionicons

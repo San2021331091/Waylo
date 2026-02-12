@@ -1,0 +1,1 @@
+export const SpecificTripsColor: string[] = ["#fdfcfc", "#faf9fb"];

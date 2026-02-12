@@ -1,0 +1,1 @@
+export const popularDestinationsCardColor:string[] = ["#e8f3fb", "#e4ffec"];

@@ -1,6 +1,6 @@
 import React from "react";
-import TabNavigator from "@/navigation/TabNavigator";
 import {NavigationContainer} from "@react-navigation/native";
+import RootStack from "@/navigation/RootStack.tsx";
 
 
 const App: React.FC = (): React.JSX.Element => {
@@ -9,7 +9,7 @@ const App: React.FC = (): React.JSX.Element => {
 
         <NavigationContainer>
 
-            <TabNavigator/>
+            <RootStack/>
 
         </NavigationContainer>
 

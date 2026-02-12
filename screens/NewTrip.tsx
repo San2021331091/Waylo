@@ -1,12 +1,12 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 
-const TripStack = () => {
+const NewTrip = () => {
     return (
         <View>
-            <Text>TripStack</Text>
+            <Text>NewTrip</Text>
         </View>
     );
 };
 
-export default TripStack;
+export default NewTrip;

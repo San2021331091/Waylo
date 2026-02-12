@@ -1,0 +1,1 @@
+export const featuredCardColor:string[] = ["#e8f1e1", "#d9f6e2"];

@@ -1,0 +1,1 @@
+export const loginScreenColor:string[] = ['#00C853', '#B2FF59'];

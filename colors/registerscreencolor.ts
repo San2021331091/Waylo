@@ -1,0 +1,1 @@
+export const registerScreenColor = ['#05c655', '#70c311'];

@@ -1,0 +1,1 @@
+export const weekendTipsCardColor:string[] = ["#c3f6cb", "#e9faee"];
