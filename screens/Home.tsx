@@ -13,7 +13,6 @@ import AIChatModal from "@/ui-components/AIChatModal";
 
 
 
-
 const Home: React.FC = (): React.JSX.Element => {
 
 const navigation = useNavigation<NativeStackNavigationProp<HomeStackParamList>>();

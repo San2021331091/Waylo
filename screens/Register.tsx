@@ -18,7 +18,7 @@ import {
     AlertDialogBody,
     AlertDialogFooter,
     AlertDialogCloseButton,
-    AlertDialogBackdrop,
+    AlertDialogBackdrop
 } from '@/components/ui/alert-dialog';
 
 import { AuthStackParamList } from '@/navigation_types/authstackparamlist';

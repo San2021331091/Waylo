@@ -15,6 +15,7 @@ interface AIChatModalProps {
     onClose: () => void;
 }
 
+{/*AI Chatbot for travel planner */}
 const AIChatModal: React.FC<AIChatModalProps> = ({
                                                      visible,
                                                      onClose,
