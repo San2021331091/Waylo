@@ -15,11 +15,10 @@ interface AIChatModalProps {
     onClose: () => void;
 }
 
-{/*AI Chatbot for travel planner */}
 const AIChatModal: React.FC<AIChatModalProps> = ({
                                                      visible,
                                                      onClose,
-                                                 }) => {
+                                                 }:AIChatModalProps):React.JSX.Element => {
     return (
         <Modal
             visible={visible}
@@ -33,8 +32,7 @@ const AIChatModal: React.FC<AIChatModalProps> = ({
                 {/* Close Button */}
                 <TouchableOpacity
                     onPress={onClose}
-                    className="absolute right-5 bg-green-600 p-3 rounded-full z-10 shadow-lg"
-                    style={{ top: Platform.OS === "android" ? 40 : 60 }}
+                    className={`absolute right-5 bg-green-600 p-3 rounded-full z-10 shadow-lg ${Platform.OS === "android" ? 'top-[40]': 'top-[80]'}`}
                 >
                     <Ionicons name="close" size={22} color="#fff" />
                 </TouchableOpacity>
