@@ -142,6 +142,9 @@ AI Travel Planner – Waylo
 ## 📄 License
 
 This project is available for educational and production use.
+---
 
+---
+[Download this app](https://upload.app/download/waylo/com.waylo/27be6a0b4bf566d8daa02086ad4e0131873e1d8e57bf3014ea8e9bc95df97dfa)
 ---
 
