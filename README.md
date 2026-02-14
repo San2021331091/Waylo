@@ -1,97 +1,147 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+## Waylo
 
-# Getting Started
+**Waylo** is an AI-powered travel planner mobile application built using:
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+* React Native (CLI)
+* TypeScript
+* Gluestack UI
+* Tailwind CSS (NativeWind)
+* Supabase Authentication
 
-## Step 1: Start Metro
+It features an intelligent AI assistant called **WayloGPT**, helping users generate smart itineraries, discover destinations, and plan trips effortlessly.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+---
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## ✨ Features
 
-```sh
-# Using npm
+* 🤖 AI Travel Assistant – WayloGPT
+* 🔐 Secure Authentication
+* 🎨 Modern UI with Gluestack UI
+* 💅 Styled using Tailwind CSS
+* ⚡ Smooth and optimized performance
+* 📱 Android & iOS Support
+
+---
+
+## 🛠 Tech Stack
+
+| Technology       | Purpose          |
+| ---------------- | ---------------- |
+| React Native CLI | Mobile Framework |
+| TypeScript       | Type Safety      |
+| Gluestack UI     | UI Components    |
+| Tailwind CSS     | Styling          |
+| Supabase         | Backend & Auth   |
+| WayloGPT         | AI Travel Engine |
+
+---
+
+# 📸 App Screenshots
+
+| 1                                            | 2                                            | 3                                            |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| <img src="./screenshots/1.png" width="180"/> | <img src="./screenshots/2.png" width="180"/> | <img src="./screenshots/3.png" width="180"/> |
+
+| 4                                            | 5                                            | 6                                            |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| <img src="./screenshots/4.png" width="180"/> | <img src="./screenshots/5.png" width="180"/> | <img src="./screenshots/6.png" width="180"/> |
+
+| 7                                            | 8                                            | 9                                            |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
+| <img src="./screenshots/7.png" width="180"/> | <img src="./screenshots/8.png" width="180"/> | <img src="./screenshots/9.png" width="180"/> |
+
+| 10                                            | 11                                            | 12                                            |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| <img src="./screenshots/10.png" width="180"/> | <img src="./screenshots/11.png" width="180"/> | <img src="./screenshots/12.png" width="180"/> |
+
+| 13                                            | 14                                            | 15                                            |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| <img src="./screenshots/13.png" width="180"/> | <img src="./screenshots/14.png" width="180"/> | <img src="./screenshots/15.png" width="180"/> |
+
+| 16                                            | 17                                            |
+| --------------------------------------------- | --------------------------------------------- |
+| <img src="./screenshots/16.png" width="180"/> | <img src="./screenshots/17.png" width="180"/> |
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn install
+```
+
+---
+
+### 2️⃣ Start Metro
+
+```bash
 npm start
-
-# OR using Yarn
-yarn start
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+### 3️⃣ Run the App
 
-### Android
+#### Android
 
-```sh
-# Using npm
+```bash
 npm run android
-
-# OR using Yarn
-yarn android
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## 📦 Generate Release Build (Android)
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+### APK
 
-```sh
-bundle install
+```bash
+cd android
+gradlew assembleRelease
 ```
 
-Then, and every time you update your native dependencies, run:
+Output:
 
-```sh
-bundle exec pod install
+```
+android/app/build/outputs/apk/release/app-release.apk
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+### App Bundle (Play Store Recommended)
 
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
+```bash
+gradlew bundleRelease
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🔐 Environment Variables
 
-## Step 3: Modify your app
+Create a `.env` file:
 
-Now that you have successfully run the app, let's make changes!
+```
+SUPABASE_URL=your_url
+SUPABASE_ANON_KEY=your_key
+```
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+---
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## 👨‍💻 Author
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+**Santosh Saha**
+AI Travel Planner – Waylo
 
-## Congratulations! :tada:
+---
 
-You've successfully run and modified your React Native App. :partying_face:
+## 📄 License
 
-### Now what?
+This project is available for educational and production use.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+---
 
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
