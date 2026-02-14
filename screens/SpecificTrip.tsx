@@ -6,6 +6,7 @@ import {
     Dimensions,
     ActivityIndicator,
     ScrollView,
+    Alert,
 } from "react-native";
 import FastImage from "react-native-fast-image";
 import LinearGradient from "react-native-linear-gradient";
@@ -31,16 +32,15 @@ const CARD_HEIGHT = width * 0.55;
 
 const SpecificTrip: React.FC = (): React.JSX.Element => {
     const [place, setPlace] = useState<Place | null>(null);
-    const [loading, setLoading] = useState(true);
-
+    const [loading, setLoading] = useState<boolean>(true);
     const route = useRoute();
     const navigation = useNavigation();
     const mapNavigation = useNavigation<NativeStackNavigationProp<HomeStackParamList>>();
     const { id } = route.params as { id: string };
 
     // 🔥 Reanimated values
-    const opacity = useSharedValue(0);
-    const translateY = useSharedValue(40);
+    const opacity = useSharedValue<number>(0);
+    const translateY = useSharedValue<number>(40);
 
     useEffect(() => {
         fetchPlaceById(id).then();
@@ -90,6 +90,43 @@ const SpecificTrip: React.FC = (): React.JSX.Element => {
 
         return "sunny";
     };
+
+    const handleBooking = async () => {
+        if (!place) return;
+
+        const { data: userData } = await supabase.auth.getUser();
+        const user = userData?.user;
+
+        if (!user) {
+            Alert.alert("Please login first");
+            return;
+        }
+
+        const { error } = await supabase
+            .from("bookings")
+            .insert([
+                {
+                    user_id: user.id,
+                    place_id: place.id,
+                    travel_date: new Date(),
+                    guests: 1,
+                    total_price: place.price_usd,
+                    status: "pending",
+                    place_title: place.title,
+                    city: place.city,
+                    country: place.country,
+                },
+            ]);
+
+        if (error) {
+            console.log(error.message);
+            Alert.alert("Booking failed");
+        } else {
+            Alert.alert("Booking successful 🎉");
+        }
+    };
+
+
 
     if (loading)
         return (
@@ -217,7 +254,7 @@ const SpecificTrip: React.FC = (): React.JSX.Element => {
                         </TouchableOpacity>
                     </View>
 
-                <TouchableOpacity className="bg-green-600 mt-10 mb-10 rounded-full py-5 items-center active:opacity-80 shadow">
+                <TouchableOpacity className="bg-green-600 mt-10 mb-10 rounded-full py-5 items-center active:opacity-80 shadow" onPress={handleBooking}>
                     <Text className="text-white font-bold text-xl">
                         Book Now
                     </Text>

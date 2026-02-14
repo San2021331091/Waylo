@@ -1,128 +1,113 @@
 import React, { useEffect, useState } from "react";
-import {
-    View,
-    Text,
-    StyleSheet,
-    Dimensions,
-    ActivityIndicator,
-    TouchableOpacity,
-} from "react-native";
-import MapView, { Marker } from "react-native-maps";
-import { useRoute, useNavigation } from "@react-navigation/core";
+import { View, Text, ActivityIndicator, TouchableOpacity } from "react-native";
+import { useRoute, useNavigation, RouteProp } from "@react-navigation/native";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import MapView, { Marker, UrlTile, PROVIDER_DEFAULT } from "react-native-maps";
 
-const { width, height } = Dimensions.get("window");
+const GEOAPIFY_API_KEY = process.env.METRO_PUBLIC_GEOAPIFY_API_KEY || "";
 
-const LOCATIONIQ_API_KEY = "YOUR_LOCATIONIQ_KEY"; // 👈 Put your key here
+type RouteParams = {
+    MapScreen: {
+        latitude?: number;
+        longitude?: number;
+    };
+};
 
-const Map: React.FC = (): React.JSX.Element => {
-    const route = useRoute();
+const Map: React.FC = () => {
+    const route = useRoute<RouteProp<RouteParams, "MapScreen">>();
     const navigation = useNavigation();
 
-    const { longitude, latitude } = route.params as {
-        longitude: number;
-        latitude: number;
-    };
+    const latitude = route.params?.latitude;
+    const longitude = route.params?.longitude;
+
+    if (latitude === undefined || longitude === undefined) {
+        return (
+            <View className="flex-1 justify-center items-center">
+                <Text>No location provided</Text>
+            </View>
+        );
+    }
+
+    const lat = Number(latitude);
+    const lng = Number(longitude);
 
     const [address, setAddress] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        const reverseGeocode = async () => {
+            try {
+                const res = await fetch(
+                    `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lng}&apiKey=${GEOAPIFY_API_KEY}`
+                );
+                const data = await res.json();
+                if (data.features && data.features.length > 0) {
+                    setAddress(data.features[0].properties.formatted);
+                }
+            } catch (err) {
+                console.log("Geoapify Reverse Geocode Error:", err);
+            } finally {
+                setLoading(false);
+            }
+        };
         reverseGeocode().then();
-    }, []);
+    }, [lat, lng]);
 
-    const reverseGeocode = async () => {
-        try {
-            const response = await fetch(
-                `https://us1.locationiq.com/v1/reverse.php?key=${LOCATIONIQ_API_KEY}&lat=${latitude}&lon=${longitude}&format=json`
-            );
-
-            const data = await response.json();
-            setAddress(data.display_name);
-        } catch (error) {
-            console.log("Reverse Geocode Error:", error);
-        } finally {
-            setLoading(false);
-        }
-    };
+    // Adjust delta for better Android rendering
+    const latitudeDelta = 0.02;
+    const longitudeDelta = 0.02;
 
     return (
-        <View style={styles.container}>
-            {/* 🗺 Map */}
+        <View className="flex-1">
+            {/* Loading overlay */}
+            {loading && (
+                <View className="absolute inset-0 justify-center items-center z-10 bg-white/50">
+                    <ActivityIndicator size="large" color="#34D399" />
+                </View>
+            )}
+
+            {/* Map */}
             <MapView
-                style={styles.map}
+                provider={PROVIDER_DEFAULT}
+                style={{ flex: 1 }}
                 initialRegion={{
-                    latitude: latitude,
-                    longitude: longitude,
-                    latitudeDelta: 0.05,
-                    longitudeDelta: 0.05,
+                    latitude: lat,
+                    longitude: lng,
+                    latitudeDelta,
+                    longitudeDelta,
                 }}
+                showsUserLocation={false}
+                showsMyLocationButton={false}
+                rotateEnabled={false}
+                pitchEnabled={false}
             >
-                <Marker coordinate={{ latitude, longitude }} />
+                {/* OpenStreetMap tiles */}
+                <UrlTile
+                    urlTemplate="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    maximumZ={19}
+                    flipY={false}
+                />
+
+                {/* Marker */}
+                <Marker
+                    coordinate={{ latitude: lat, longitude: lng }}
+                    title="You are here"
+                    description={address || ""}
+                    className='bg-green-500 text-white'
+                />
             </MapView>
 
-            {/* 🔙 Back Button */}
+            {/* Back button */}
             <TouchableOpacity
-                style={styles.backButton}
                 onPress={() => navigation.goBack()}
+                className="absolute top-12 left-5 bg-green-500 p-3 rounded-full shadow"
             >
-                <Ionicons name="arrow-back" size={24} color="#fff" />
+                <Ionicons name="arrow-back" size={22} color="#fff" />
             </TouchableOpacity>
 
-            {/* 📍 Bottom Card */}
-            <View style={styles.bottomCard}>
-                {loading ? (
-                    <ActivityIndicator size="small" color="#22c55e" />
-                ) : (
-                    <>
-                        <Text style={styles.title}>Selected Location</Text>
-                        <Text style={styles.address}>
-                            {address ?? "Address not found"}
-                        </Text>
-                    </>
-                )}
-            </View>
+
         </View>
     );
 };
 
 export default Map;
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    map: {
-        width: width,
-        height: height,
-    },
-    backButton: {
-        position: "absolute",
-        top: 50,
-        left: 20,
-        backgroundColor: "#22c55e",
-        padding: 10,
-        borderRadius: 30,
-        elevation: 5,
-    },
-    bottomCard: {
-        position: "absolute",
-        bottom: 30,
-        left: 20,
-        right: 20,
-        backgroundColor: "#fff",
-        padding: 16,
-        borderRadius: 20,
-        elevation: 8,
-    },
-    title: {
-        fontSize: 16,
-        fontWeight: "bold",
-        marginBottom: 6,
-        color: "#111",
-    },
-    address: {
-        fontSize: 14,
-        color: "#555",
-    },
-});

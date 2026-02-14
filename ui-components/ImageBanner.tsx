@@ -22,7 +22,7 @@ const ImageBanner:React.FC = ():React.JSX.Element => {
                         Plan your next adventure
                     </Text>
 
-                    <TouchableOpacity className="mt-6 bg-green-600 px-6 py-3 rounded-full" onPress={ (): void => navigation.navigate('NewTrip')}>
+                    <TouchableOpacity className="mt-6 bg-green-600 px-6 py-3 rounded-full" onPress={ (): void => navigation.navigate('Explore')}>
                         <Text className="text-white font-semibold">
                             Create a new trip plan
                         </Text>

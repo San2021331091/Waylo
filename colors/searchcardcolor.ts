@@ -1,0 +1,1 @@
+export const SearchCardColor = ["#16a34a", "#065f46"];

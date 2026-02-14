@@ -1,0 +1,1 @@
+export const AllPlacesCardColor:string[] = ["#f7f8f1", "#d9eddf"];

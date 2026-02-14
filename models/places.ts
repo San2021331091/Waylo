@@ -9,7 +9,6 @@ export interface Place {
     latitude?: number;
     longitude?: number;
     temperature?: number;
-    weather_condition?: string;
     weather_icon?: string;
     price_usd?: number;
     duration_days?: number;

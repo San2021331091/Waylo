@@ -1,15 +1,15 @@
 import {createBottomTabNavigator, BottomTabBar} from '@react-navigation/bottom-tabs';
 import LinearGradient from 'react-native-linear-gradient';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
 import HomeStack from '@/navigation/HomeStack';
-import Explore from '@/screens/Explore';
 import Profile from '@/screens/Profile';
-import {bottomTabsColor} from "@/colors/bottomtabscolor.ts";
+import {bottomTabsColor} from "@/colors/bottomtabscolor";
 import React from "react";
-import NewTrip from "@/screens/NewTrip";
+import {TabNavigatorParamList} from "@/navigation_types/tabnavigatorparamlist";
+import TripStack from "@/navigation/TripStack";
 
-const Tab = createBottomTabNavigator();
+
+const Tab = createBottomTabNavigator<TabNavigatorParamList>();
 
 const TabNavigator = (): React.JSX.Element => {
     return (
@@ -73,23 +73,10 @@ const TabNavigator = (): React.JSX.Element => {
                 }}
             />
 
-            <Tab.Screen
-                name="Trips"
-                component={NewTrip}
-                options={{
-                    tabBarIcon: ({color, size, focused}) => (
-                        <Ionicons
-                            name={focused ? 'airplane' : 'airplane-outline'}
-                            size={size}
-                            color={color}
-                        />
-                    ),
-                }}
-            />
 
             <Tab.Screen
                 name="Explore"
-                component={Explore}
+                component={TripStack}
                 options={{
                     tabBarIcon: ({color, size, focused}) => (
                         <Ionicons
