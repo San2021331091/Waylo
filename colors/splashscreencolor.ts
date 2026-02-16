@@ -1,0 +1,1 @@
+export const SplashScreenColor:string[] = ["#048440", "#065F46"];

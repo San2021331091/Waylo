@@ -15,8 +15,8 @@ import { Card } from "@/components/ui/card";
 import { useNavigation } from "@react-navigation/core";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { HomeStackParamList } from "@/navigation_types/homestackparamlist";
-import {weekendTipsCardColor} from "@/colors/weekendtipscolor.ts";
-import {RandomizedPlace} from "@/util/randomize.ts";
+import { weekendTipsCardColor } from "@/colors/weekendtipscolor.ts";
+import { RandomizedPlace } from "@/util/randomize.ts";
 
 const { width } = Dimensions.get("window");
 const CARD_WIDTH = width * 0.85;
@@ -61,7 +61,7 @@ const WeekendTips: React.FC = (): React.JSX.Element => {
     }
 
     return (
-        <View className="m-6">
+        <View className="flex-col justify-center items-center">
             <Text className="text-2xl font-bold px-4 mb-4 text-green-600">
                 Weekend Tips
             </Text>
@@ -71,7 +71,13 @@ const WeekendTips: React.FC = (): React.JSX.Element => {
                 showsHorizontalScrollIndicator={false}
                 data={places}
                 keyExtractor={(item) => item.id}
-                contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 30 }}
+                snapToAlignment="center"
+                decelerationRate="fast"
+                snapToInterval={CARD_WIDTH + 16}
+                contentContainerStyle={{
+                    paddingHorizontal: (width - CARD_WIDTH) / 2,
+                    paddingBottom: 30,
+                }}
                 renderItem={({ item }) => (
                     <TouchableOpacity
                         activeOpacity={0.9}
@@ -112,7 +118,7 @@ const WeekendTips: React.FC = (): React.JSX.Element => {
                                     <View className="mt-2">
                                         <TouchableOpacity
                                             className="bg-green-600 rounded-full py-3 px-6 items-center self-center shadow-md"
-                                            onPress={() =>navigation.navigate('Trip',{id: item.id}) }
+                                            onPress={() => navigation.navigate('Trip', { id: item.id })}
                                         >
                                             <Text className="text-base font-semibold text-white">See more</Text>
                                         </TouchableOpacity>

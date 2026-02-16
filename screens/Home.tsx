@@ -49,7 +49,10 @@ const navigation = useNavigation<NativeStackNavigationProp<HomeStackParamList>>(
 
                 <View className='border-b border-gray-200 mx-4'>
 
-                 <ImageBanner/>
+               <View className='flex items-center justify-center mt-2 mb-4'>
+                  <ImageBanner/>
+               </View>
+
 
                 </View>
                 <View className='mt-3'>

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { KeyboardAvoidingView, Platform, Alert } from 'react-native';
+import { KeyboardAvoidingView, Platform, Alert, TouchableOpacity } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import { Box } from '@/components/ui/box';
 import { VStack } from '@/components/ui/vstack';
 import { Text } from '@/components/ui/text';
 import { Input, InputField } from '@/components/ui/input';
-import { Button, ButtonText } from '@/components/ui/button';
 import { useForm, Controller } from 'react-hook-form';
 import { supabase } from '@/supabase/SupabaseClient';
 import { useNavigation } from '@react-navigation/core';
@@ -126,22 +125,23 @@ const Login: React.FC = (): React.JSX.Element => {
                         )}
 
                         {/* Login Button */}
-                        <Button
-                            size="lg"
-                            className="mt-2 bg-green-600 rounded-xl py-3"
+                        <TouchableOpacity
+                            activeOpacity={0.8}
+                            className={`mt-2 bg-green-600 rounded-xl p-3 items-center ${loading ? 'opacity-60' : ''}`}
                             onPress={handleSubmit(onSubmit)}
                             disabled={loading}
                         >
-                            <ButtonText className="text-white font-bold">
+                            <Text className="text-white font-bold">
                                 {loading ? 'Logging in...' : 'Login'}
-                            </ButtonText>
-                        </Button>
+                            </Text>
+                        </TouchableOpacity>
+
                     </VStack>
 
                     {/* Footer */}
                     <Box className="mt-6 items-center">
                         <Text className="text-lg text-blue-600">
-                            Don’t have an account?{' '}
+                            Don't have an account?{' '}
                             <Text
                                 className="text-green-700 text-lg font-semibold"
                                 onPress={() => navigation.navigate('Register')}

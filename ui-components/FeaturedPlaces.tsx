@@ -60,7 +60,7 @@ const FeaturedPlaces: React.FC = (): React.JSX.Element => {
     }
 
     return (
-        <View className="m-6">
+        <View className="flex-col justify-center items-center">
             <Text className="text-2xl font-bold px-4 mb-4 text-green-600">
                 Featured Places
             </Text>
@@ -70,7 +70,13 @@ const FeaturedPlaces: React.FC = (): React.JSX.Element => {
                 showsHorizontalScrollIndicator={false}
                 data={places}
                 keyExtractor={(item) => item.id}
-                contentContainerStyle={{ paddingHorizontal: 16, paddingBottom: 30 }}
+                snapToAlignment="center"
+                decelerationRate="fast"
+                snapToInterval={CARD_WIDTH + 16}
+                contentContainerStyle={{
+                    paddingHorizontal: (width - CARD_WIDTH) / 2,
+                    paddingBottom: 30,
+                }}
                 renderItem={({ item }) => (
                     <TouchableOpacity
                         activeOpacity={0.9}

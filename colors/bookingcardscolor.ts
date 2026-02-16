@@ -1,0 +1,1 @@
+export const BookingCardsColor : string[] = ["#16a34a", "#065f46"];

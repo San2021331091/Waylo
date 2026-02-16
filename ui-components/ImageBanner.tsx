@@ -1,13 +1,13 @@
 import { View, Text, ImageBackground, TouchableOpacity } from "react-native";
 import React from "react";
-import {useNavigation} from "@react-navigation/core";
-import {NativeStackNavigationProp} from "@react-navigation/native-stack";
-import {HomeStackParamList} from "@/navigation_types/homestackparamlist";
+import { useNavigation } from "@react-navigation/core";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { HomeStackParamList } from "@/navigation_types/homestackparamlist";
 
-const ImageBanner:React.FC = ():React.JSX.Element => {
+const ImageBanner: React.FC = (): React.JSX.Element => {
     const navigation = useNavigation<NativeStackNavigationProp<HomeStackParamList>>()
     return (
-        <View className="w-full h-80 rounded-2xl overflow-hidden">
+        <View className="w-[92%] self-center h-80 rounded-2xl overflow-hidden">
             <ImageBackground
                 source={{ uri: "https://i.postimg.cc/YCVGX0wm/nature.jpg" }}
                 resizeMode="cover"
@@ -22,7 +22,7 @@ const ImageBanner:React.FC = ():React.JSX.Element => {
                         Plan your next adventure
                     </Text>
 
-                    <TouchableOpacity className="mt-6 bg-green-600 px-6 py-3 rounded-full" onPress={ (): void => navigation.navigate('Explore')}>
+                    <TouchableOpacity className="mt-6 bg-green-600 px-6 py-3 rounded-full" onPress={(): void => navigation.navigate('Explore')}>
                         <Text className="text-white font-semibold">
                             Create a new trip plan
                         </Text>

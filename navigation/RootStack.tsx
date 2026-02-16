@@ -25,6 +25,8 @@ const RootStack = () => {
         return () => listener.subscription.unsubscribe();
     }, []);
 
+  
+
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             {session ? (

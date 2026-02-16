@@ -19,7 +19,7 @@ It features an intelligent AI assistant called **WayloGPT**, helping users gener
 * 🎨 Modern UI with Gluestack UI
 * 💅 Styled using Tailwind CSS
 * ⚡ Smooth and optimized performance
-* 📱 Android & iOS Support
+* 📱 Android Support
 
 ---
 
@@ -38,29 +38,33 @@ It features an intelligent AI assistant called **WayloGPT**, helping users gener
 
 # 📸 App Screenshots
 
-| 1                                            | 2                                            | 3                                            |
+| 0                                            | 1                                            | 2                                            |
 | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| <img src="./screenshots/1.png" width="180"/> | <img src="./screenshots/2.png" width="180"/> | <img src="./screenshots/3.png" width="180"/> |
+| <img src="./screenshots/0.png" width="180"/> | <img src="./screenshots/1.png" width="180"/> | <img src="./screenshots/2.png" width="180"/> |
 
-| 4                                            | 5                                            | 6                                            |
+| 3                                            | 4                                            | 5                                            |
 | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| <img src="./screenshots/4.png" width="180"/> | <img src="./screenshots/5.png" width="180"/> | <img src="./screenshots/6.png" width="180"/> |
+| <img src="./screenshots/3.png" width="180"/> | <img src="./screenshots/4.png" width="180"/> | <img src="./screenshots/5.png" width="180"/> |
 
-| 7                                            | 8                                            | 9                                            |
+| 6                                            | 7                                            | 8                                            |
 | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| <img src="./screenshots/7.png" width="180"/> | <img src="./screenshots/8.png" width="180"/> | <img src="./screenshots/9.png" width="180"/> |
+| <img src="./screenshots/6.png" width="180"/> | <img src="./screenshots/7.png" width="180"/> | <img src="./screenshots/8.png" width="180"/> |
 
-| 10                                            | 11                                            | 12                                            |
+| 9                                            | 10                                            | 11                                            |
+| -------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| <img src="./screenshots/9.png" width="180"/> | <img src="./screenshots/10.png" width="180"/> | <img src="./screenshots/11.png" width="180"/> |
+
+| 12                                            | 13                                            | 14                                            |
 | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| <img src="./screenshots/10.png" width="180"/> | <img src="./screenshots/11.png" width="180"/> | <img src="./screenshots/12.png" width="180"/> |
+| <img src="./screenshots/12.png" width="180"/> | <img src="./screenshots/13.png" width="180"/> | <img src="./screenshots/14.png" width="180"/> |
 
-| 13                                            | 14                                            | 15                                            |
+| 15                                            | 16                                            | 17                                            |
 | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| <img src="./screenshots/13.png" width="180"/> | <img src="./screenshots/14.png" width="180"/> | <img src="./screenshots/15.png" width="180"/> |
+| <img src="./screenshots/15.png" width="180"/> | <img src="./screenshots/16.png" width="180"/> | <img src="./screenshots/17.png" width="180"/> |
 
-| 16                                            | 17                                            |
+| 18                                            | 19                                            |
 | --------------------------------------------- | --------------------------------------------- |
-| <img src="./screenshots/16.png" width="180"/> | <img src="./screenshots/17.png" width="180"/> |
+| <img src="./screenshots/18.png" width="180"/> | <img src="./screenshots/19.png" width="180"/> |
 
 ---
 
@@ -142,9 +146,11 @@ AI Travel Planner – Waylo
 ## 📄 License
 
 This project is available for educational and production use.
----
 
 ---
-[Download this app](https://upload.app/download/waylo/com.waylo/27be6a0b4bf566d8daa02086ad4e0131873e1d8e57bf3014ea8e9bc95df97dfa)
+
+[Download this app](https://upload.app/download/waylo/com.waylo/c257656c6283d8847f1b4df76e970123c776aafe4e9d690c274558806bd209d6)
+
 ---
+
 

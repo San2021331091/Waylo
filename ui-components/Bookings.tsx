@@ -10,6 +10,7 @@ import {
 import { supabase } from "@/supabase/SupabaseClient";
 import { PlaceBookings } from "@/models/bookings";
 import LinearGradient from "react-native-linear-gradient";
+import { BookingCardsColor } from './../colors/bookingcardscolor';
 
 const Bookings: React.FC = (): React.JSX.Element => {
     const [bookings, setBookings] = useState<PlaceBookings>([]);
@@ -105,10 +106,10 @@ const Bookings: React.FC = (): React.JSX.Element => {
                 data={bookings}
                 keyExtractor={(item) => item.id}
                 showsVerticalScrollIndicator={false}
-                contentContainerStyle={{ paddingBottom: 30 }}
+                contentContainerStyle={{ paddingBottom: 120 }}
                 renderItem={({ item }) => (
                     <LinearGradient
-                        colors={["#16a34a", "#065f46"]}
+                        colors={BookingCardsColor}
                         className="mb-6 rounded-3xl p-6 shadow-lg"
                     >
                         <Text className="text-white text-2xl font-bold">
@@ -121,7 +122,7 @@ const Bookings: React.FC = (): React.JSX.Element => {
 
                         <View className="h-[1px] bg-green-300 opacity-30 my-4" />
 
-                        <View className="flex-row justify-between items-center">
+                        <View className="flex-row justify-between items-center"   >
                             <View>
                                 <Text className="text-green-200 text-lg">Travel Date</Text>
                                 <Text className="text-white text-lg font-semibold">
