@@ -10,7 +10,7 @@ const TripStack = () => {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name="ExploreList" component={Explore} />
             <Stack.Screen name="Trip" component={SpecificTrip} />
-            <Stack.Screen name='Map' component={Map}/>
+            <Stack.Screen name="Map" component={Map}/>
         </Stack.Navigator>
     );
 };

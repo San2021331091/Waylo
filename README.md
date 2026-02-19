@@ -50,8 +50,8 @@ It features an intelligent AI assistant called **WayloGPT**, helping users gener
 | -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
 | <img src="./screenshots/6.png" width="180"/> | <img src="./screenshots/7.png" width="180"/> | <img src="./screenshots/8.png" width="180"/> |
 
-| 9                                            | 10                                            | 11                                            |
-| -------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| 9                                            | 10                                           | 11                                           |
+| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
 | <img src="./screenshots/9.png" width="180"/> | <img src="./screenshots/10.png" width="180"/> | <img src="./screenshots/11.png" width="180"/> |
 
 | 12                                            | 13                                            | 14                                            |
@@ -62,9 +62,9 @@ It features an intelligent AI assistant called **WayloGPT**, helping users gener
 | --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
 | <img src="./screenshots/15.png" width="180"/> | <img src="./screenshots/16.png" width="180"/> | <img src="./screenshots/17.png" width="180"/> |
 
-| 18                                            | 19                                            |
-| --------------------------------------------- | --------------------------------------------- |
-| <img src="./screenshots/18.png" width="180"/> | <img src="./screenshots/19.png" width="180"/> |
+| 18                                            | 19                                            | 20                                            |
+| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
+| <img src="./screenshots/18.png" width="180"/> | <img src="./screenshots/19.png" width="180"/> | <img src="./screenshots/20.png" width="180"/> |
 
 ---
 
@@ -74,7 +74,7 @@ It features an intelligent AI assistant called **WayloGPT**, helping users gener
 
 ```bash
 npm install
-```
+````
 
 or
 
@@ -149,8 +149,8 @@ This project is available for educational and production use.
 
 ---
 
-[Download this app](https://upload.app/download/waylo/com.waylo/c257656c6283d8847f1b4df76e970123c776aafe4e9d690c274558806bd209d6)
+[Download this app](https://upload.app/download/waylo/com.waylo/345acd945334ac3592bf2dca17773370e443a9686369f809bf7e1e54a3633b81)
 
----
+```
 
 

@@ -7,7 +7,7 @@ import { HomeStackParamList } from "@/navigation_types/homestackparamlist";
 const ImageBanner: React.FC = (): React.JSX.Element => {
     const navigation = useNavigation<NativeStackNavigationProp<HomeStackParamList>>()
     return (
-        <View className="w-[92%] self-center h-80 rounded-2xl overflow-hidden">
+        <View className="w-[95%] self-center h-80 rounded-2xl overflow-hidden">
             <ImageBackground
                 source={{ uri: "https://i.postimg.cc/YCVGX0wm/nature.jpg" }}
                 resizeMode="cover"

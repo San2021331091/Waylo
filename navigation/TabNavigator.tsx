@@ -11,7 +11,7 @@ import TripStack from "@/navigation/TripStack";
 
 const Tab = createBottomTabNavigator<TabNavigatorParamList>();
 
-const TabNavigator = (): React.JSX.Element => {
+const TabNavigator:React.FC = (): React.JSX.Element => {
     return (
         <Tab.Navigator
             screenOptions={{

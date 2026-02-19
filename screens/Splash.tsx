@@ -15,7 +15,7 @@ const Splash: React.FC = (): React.JSX.Element => {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   // Shared value for bounce
-  const scale = useSharedValue(1);
+  const scale = useSharedValue<number>(1);
 
   useEffect(() => {
     // Spring bounce animation
