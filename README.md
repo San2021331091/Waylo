@@ -38,39 +38,20 @@ It features an intelligent AI assistant called **WayloGPT**, helping users gener
 
 # 📸 App Screenshots
 
-| 0                                            | 1                                            | 2                                            |
-| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| <img src="./screenshots/0.png" width="180"/> | <img src="./screenshots/1.png" width="180"/> | <img src="./screenshots/2.png" width="180"/> |
+| | | |
+|---|---|---|
+| <a href="./screenshots/0.png"><img src="./screenshots/0.png" width="180"/></a> | <a href="./screenshots/1.png"><img src="./screenshots/1.png" width="180"/></a> | <a href="./screenshots/2.png"><img src="./screenshots/2.png" width="180"/></a> |
+| <a href="./screenshots/3.png"><img src="./screenshots/3.png" width="180"/></a> | <a href="./screenshots/4.png"><img src="./screenshots/4.png" width="180"/></a> | <a href="./screenshots/5.png"><img src="./screenshots/5.png" width="180"/></a> |
+| <a href="./screenshots/6.png"><img src="./screenshots/6.png" width="180"/></a> | <a href="./screenshots/7.png"><img src="./screenshots/7.png" width="180"/></a> | <a href="./screenshots/8.png"><img src="./screenshots/8.png" width="180"/></a> |
+| <a href="./screenshots/9.png"><img src="./screenshots/9.png" width="180"/></a> | <a href="./screenshots/10.png"><img src="./screenshots/10.png" width="180"/></a> | <a href="./screenshots/11.png"><img src="./screenshots/11.png" width="180"/></a> |
+| <a href="./screenshots/12.png"><img src="./screenshots/12.png" width="180"/></a> | <a href="./screenshots/13.png"><img src="./screenshots/13.png" width="180"/></a> | <a href="./screenshots/14.png"><img src="./screenshots/14.png" width="180"/></a> |
+| <a href="./screenshots/15.png"><img src="./screenshots/15.png" width="180"/></a> | <a href="./screenshots/16.png"><img src="./screenshots/16.png" width="180"/></a> | <a href="./screenshots/17.png"><img src="./screenshots/17.png" width="180"/></a> |
+| <a href="./screenshots/18.png"><img src="./screenshots/18.png" width="180"/></a> | <a href="./screenshots/19.png"><img src="./screenshots/19.png" width="180"/></a> | <a href="./screenshots/20.png"><img src="./screenshots/20.png" width="180"/></a> |
 
-| 3                                            | 4                                            | 5                                            |
-| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| <img src="./screenshots/3.png" width="180"/> | <img src="./screenshots/4.png" width="180"/> | <img src="./screenshots/5.png" width="180"/> |
-
-| 6                                            | 7                                            | 8                                            |
-| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| <img src="./screenshots/6.png" width="180"/> | <img src="./screenshots/7.png" width="180"/> | <img src="./screenshots/8.png" width="180"/> |
-
-| 9                                            | 10                                           | 11                                           |
-| -------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-| <img src="./screenshots/9.png" width="180"/> | <img src="./screenshots/10.png" width="180"/> | <img src="./screenshots/11.png" width="180"/> |
-
-| 12                                            | 13                                            | 14                                            |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| <img src="./screenshots/12.png" width="180"/> | <img src="./screenshots/13.png" width="180"/> | <img src="./screenshots/14.png" width="180"/> |
-
-| 15                                            | 16                                            | 17                                            |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| <img src="./screenshots/15.png" width="180"/> | <img src="./screenshots/16.png" width="180"/> | <img src="./screenshots/17.png" width="180"/> |
-
-| 18                                            | 19                                            | 20                                            |
-| --------------------------------------------- | --------------------------------------------- | --------------------------------------------- |
-| <img src="./screenshots/18.png" width="180"/> | <img src="./screenshots/19.png" width="180"/> | <img src="./screenshots/20.png" width="180"/> |
-
----
 
 ## 🚀 Getting Started
 
-### 1️⃣ Install Dependencies
+### Install Dependencies
 
 ```bash
 npm install
@@ -84,7 +65,7 @@ yarn install
 
 ---
 
-### 2️⃣ Start Metro
+### Start Metro
 
 ```bash
 npm start
@@ -92,7 +73,7 @@ npm start
 
 ---
 
-### 3️⃣ Run the App
+### Run the App
 
 #### Android
 
@@ -150,7 +131,5 @@ This project is available for educational and production use.
 ---
 
 [Download this app](https://upload.app/download/waylo/com.waylo/345acd945334ac3592bf2dca17773370e443a9686369f809bf7e1e54a3633b81)
-
-```
 
 
